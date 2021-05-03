@@ -13,7 +13,7 @@ export TARGET_KEYWORD="Kaartdiensten"
 T_DIR=tests/trivial
 
 # Reporting dir: start fresh
-R_DIR=${T_DIR}/report
+R_DIR=${T_DIR}/report2
 rm -rf ${R_DIR} > /dev/null 2>&1
 mkdir -p ${R_DIR}
 
