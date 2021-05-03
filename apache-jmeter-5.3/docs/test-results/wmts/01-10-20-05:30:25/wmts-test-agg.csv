@@ -1,0 +1,4 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Std. Dev.
+capabilities,4491,43,31,84,137,223,7,488,0.00%,1.2,126.5,42.56
+tile,447494,138,23,547,736,1127,2,2940,0.00%,124.4,7674.2,261.74
+TOTAL,451985,138,23,544,733,1124,2,2940,0.00%,125.5,7792.5,260.65

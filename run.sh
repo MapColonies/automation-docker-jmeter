@@ -3,9 +3,9 @@
 # Run JMeter Docker image with options
 
 NAME="jmeter"
-IMAGE="justb4/jmeter:5.3"
+IMAGE="jmeter:5.3"
 
 # Finally run
-sudo docker stop ${NAME} > /dev/null 2>&1
-sudo docker rm ${NAME} > /dev/null 2>&1
-sudo docker run --name ${NAME} -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@
+docker stop ${NAME} > /dev/null 2>&1
+docker rm ${NAME} > /dev/null 2>&1
+docker run --net=host --name ${NAME} -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@

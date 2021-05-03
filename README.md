@@ -1,7 +1,7 @@
 [![Docker Build](https://img.shields.io/docker/automated/justb4/jmeter.svg)](https://hub.docker.com/r/justb4/jmeter)
 [![Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/justb4)
 
-# docker-jmeter
+# MC-Dockerized JMeter - forked and based from [[Github:justb4](https://github.com/justb4/docker-jmeter)]
 ## Image on Docker Hub
 
 Docker image for [Apache JMeter](http://jmeter.apache.org).
@@ -10,12 +10,10 @@ Find Images of this repo on [Docker Hub](https://hub.docker.com/r/justb4/jmeter)
 
 ## Building
 
-With the script [build.sh](build.sh) the Docker image can be build
-from the [Dockerfile](Dockerfile) but this is not really necessary as
-you may use your own ``docker build`` commandline. Or better: use one
-of the pre-built Images from [Docker Hub](https://hub.docker.com/r/justb4/jmeter).
+With the script [build.sh](build.sh) the Docker image can be built from the [Dockerfile](Dockerfile).<br/>The build will be based on jmeter 5.3 version with source included on this repo.  
+you can change to any version and adapt the docker file to build from other repo.
 
-See end of this doc for more detailed build/run/test instructions (thanks to @wilsonmar!)
+
 
 ### Build Options
 
