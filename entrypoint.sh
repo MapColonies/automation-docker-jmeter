@@ -18,6 +18,15 @@ echo "jmeter args=$@"
 # Keep entrypoint simple: we must pass the standard JMeter arguments
 jmeter $@
 echo "END Running Jmeter on `date`"
+echo "Generate now reports to result provided folder: "
+echo " -ResponseTimesOverTime.png "
+/opt/apache-jmeter-5.3/bin/JMeterPluginsCMD.sh --generate-png ${R_DIR}/ResponseTimesOverTime.png --generate-csv ${R_DIR}/wmtscsv-test-rtot.csv --input-jtl ${R_DIR}/wmtscsv-res.jtl --plugin-type ResponseTimesOverTime --width 800 --height 600
+echo " -TimesVsThreads.png"
+/opt/apache-jmeter-5.3/bin/JMeterPluginsCMD.sh --generate-png ${R_DIR}/TimesVsThreads.png --input-jtl "${R_DIR}/wmtscsv-res.jtl" --plugin-type TimesVsThreads
+echo " -TransactionsPerSecond.png"
+/opt/apache-jmeter-5.3/bin/JMeterPluginsCMD.sh --generate-png ${R_DIR}/TransactionsPerSecond.png --input-jtl "${R_DIR}/wmtscsv-res.jtl" --plugin-type TransactionsPerSecond
+echo " -AggregateReport.csv"
+/opt/apache-jmeter-5.3/bin/JMeterPluginsCMD.sh --generate-csv ${R_DIR}/AggregateReport.csv --input-jtl "${R_DIR}/wmtscsv-res.jtl" --plugin-type AggregateReport
 
 #     -n \
 #    -t "/tests/${TEST_DIR}/${TEST_PLAN}.jmx" \
